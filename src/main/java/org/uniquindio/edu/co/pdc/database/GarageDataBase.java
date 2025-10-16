@@ -9,37 +9,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class GarageDataBase {
 
     private static GarageDataBase dbInstance;
+    private ObservableList<IBike> listBikes = FXCollections.observableArrayList();
 
-    private List<IBike> listBikes = new ArrayList<>();
-
-
-    public static GarageDataBase getInstance(){
-        if(dbInstance == null){
+    public static GarageDataBase getInstance() {
+        if (dbInstance == null) {
             dbInstance = new GarageDataBase();
         }
         return dbInstance;
     }
 
-    public List<IBike> getListBikes() {
+    public ObservableList<IBike> getListBikes() {
         return listBikes;
     }
-
-    public void setListBikes(List<IBike> listBikes) {
-        this.listBikes = listBikes;
-    }
-
-//    public Optional<IBike> findBikeByPlate(String plate){
-//        return this.getListBikes()
-//                .stream()
-//                .filter(b -> b.getPlate().equals(plate))
-//                .findFirst();
-//    }
 
     public void addBike(IBike bike) {
         listBikes.add(bike);
     }
-
 }
+

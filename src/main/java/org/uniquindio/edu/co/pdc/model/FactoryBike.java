@@ -1,10 +1,11 @@
 package org.uniquindio.edu.co.pdc.model;
 
 import java.time.LocalDate;
+import java.time.Year;
 
 public class FactoryBike {
 
-    public static IBike createBike(String type, LocalDate model, String plate, String brand){
+    public static IBike createBike(String type, Year model, String plate, String brand){
         switch (type.toUpperCase()){
             case "BIKE":
                 return new Bike(model, plate, brand);

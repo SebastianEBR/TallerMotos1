@@ -6,6 +6,7 @@ import org.uniquindio.edu.co.pdc.model.IBike;
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class BikeFacade {
         this.instance = GarageDataBase.getInstance();
     }
 
-    public void registrarMoto(String type, String plate, LocalDate model, String brand) {
+    public void registrarMoto(String type, String plate, Year model, String brand) {
         IBike bike = FactoryBike.createBike(type, model, plate, brand);
         instance.addBike(bike);
     }

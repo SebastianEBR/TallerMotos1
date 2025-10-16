@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="formularioProducto" alignment="CENTER" spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.uniquindio.edu.co.pdc.controlador.FormularioMotoController"
+      stylesheets="@styles/FormularioMoto.css">
+    <padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+    <TextField fx:id="typeField" promptText="Tipo"/>
+    <TextField fx:id="plateField" promptText="Placa"/>
+    <TextField fx:id="modelField" promptText="Modelo"/>
+    <TextField fx:id="marcaField" promptText="Marca"/>
+
+    <Button fx:id="btnGuardar" text="Guardar" onAction="#onGuardar"/>
+    <Button fx:id="btnCancelar" text="Volver" onAction="#onVolver"/>
+</VBox>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="productsTable" alignment="CENTER" spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.uniquindio.edu.co.pdc.controlador.TablaMotosController"
+      stylesheets="@styles/TablaMotos.css">
+    <padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+    <TableView fx:id="tablaMotos" prefHeight="300" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="colPlate" text="Placa"/>
+            <TableColumn fx:id="colModel" text="Modelo"/>
+            <TableColumn fx:id="colBrand" text="Marca"/>
+        </columns>
+    </TableView>
+
+    <Button fx:id="btnBack" text="Volver" onAction="#onVolver"/>
+</VBox>
+

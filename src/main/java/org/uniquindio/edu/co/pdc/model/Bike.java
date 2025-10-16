@@ -1,6 +1,7 @@
 package org.uniquindio.edu.co.pdc.model;
 
 import java.time.LocalDate;
+import java.time.Year;
 
 /**
  * clase que representa motos
@@ -9,7 +10,7 @@ public class Bike implements IBike{
     /**
      * atributos de la clase
      */
-    private LocalDate model;
+    private Year model;
     private String brand;
     private String plate;
 
@@ -18,20 +19,22 @@ public class Bike implements IBike{
      */
     private Client client;
 
-    public Bike(LocalDate model, String brand, String plate) {
+    public Bike(Year model, String brand, String plate) {
         this.model = model;
         this.brand = brand;
         this.plate = plate;
     }
 
-    public LocalDate getModel() {
+    @Override
+    public Year getModel() {
         return model;
     }
 
-    public void setModel(LocalDate model) {
+    public void setModel(Year model) {
         this.model = model;
     }
 
+    @Override
     public String getBrand() {
         return brand;
     }
@@ -40,6 +43,7 @@ public class Bike implements IBike{
         this.brand = brand;
     }
 
+    @Override
     public String getPlate() {
         return plate;
     }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="contenedorPrincipal" alignment="CENTER" spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.uniquindio.edu.co.pdc.controlador.DashboardController"
+      stylesheets="@styles/Dashboard.css">
+    <padding><Insets top="30" bottom="30" left="30" right="30"/></padding>
+
+    <Button fx:id="btnFormularioMoto" text="Formulario de Moto" onAction="#onOpenFormulario"/>
+    <Button fx:id="btnListMotos" text="Lista de Motos" onAction="#onOpenLista"/>
+</VBox>
+
